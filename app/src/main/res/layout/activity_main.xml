@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nexus_bg">
+
+    <!-- Fundo radial decorativo -->
+    <View
+        android:id="@+id/vGlow"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:background="@drawable/bg_glow"
+        app:layout_constraintBottom_toTopOf="@id/cardMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/ic_nexus_logo"
+        android:contentDescription="PainelNexus"
+        app:layout_constraintBottom_toTopOf="@id/tvSystemLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Nome do sistema -->
+    <TextView
+        android:id="@+id/tvSystemLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MONITOR DE FPS E PING v1.0"
+        android:textColor="@color/nexus_accent"
+        android:textSize="12sp"
+        android:letterSpacing="0.15"
+        android:fontFamily="monospace"
+        app:layout_constraintBottom_toTopOf="@id/cardMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="4dp" />
+
+    <!-- Card principal -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        app:cardBackgroundColor="@color/nexus_card"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="12dp"
+        app:layout_constraintBottom_toTopOf="@id/btnSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSystemLabel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PainelNexus"
+                android:textColor="@color/nexus_text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monitor flutuante para jogos e apps"
+                android:textColor="@color/nexus_text_secondary"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Badge de status -->
+            <TextView
+                android:id="@+id/tvStatusBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="● INATIVO"
+                android:textColor="@color/nexus_red"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:fontFamily="monospace" />
+
+            <!-- Separador -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/nexus_divider"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Info rápida -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Toque em Iniciar Monitor\n2. Abra o jogo ou app que quiser\n3. O FPS e o ping aparecem no canto da tela; arraste para mover"
+                android:textColor="@color/nexus_text_secondary"
+                android:textSize="13sp"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- Botão Entrar no Jogo -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToggle"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:text="INICIAR MONITOR"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                app:backgroundTint="@color/nexus_accent"
+                app:cornerRadius="12dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="FPS = atualizações por segundo da tela do aparelho. Ping = tempo de resposta da sua internet (1.1.1.1)."
+                android:textColor="@color/nexus_text_secondary"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Botão de configurações -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSettings"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="40dp"
+        android:text="Permissões &amp; Info"
+        app:strokeColor="@color/nexus_accent"
+        android:textColor="@color/nexus_accent"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardMain" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

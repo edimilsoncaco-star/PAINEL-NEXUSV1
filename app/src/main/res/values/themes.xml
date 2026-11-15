@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.PainelNexus" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/nexus_accent</item>
+        <item name="colorPrimaryVariant">@color/nexus_accent_dim</item>
+        <item name="colorOnPrimary">@color/nexus_text_primary</item>
+        <item name="colorSecondary">@color/nexus_accent</item>
+        <item name="colorSecondaryVariant">@color/nexus_accent_dim</item>
+        <item name="colorOnSecondary">@color/nexus_text_primary</item>
+        <item name="android:colorBackground">@color/nexus_bg</item>
+        <item name="colorSurface">@color/nexus_card</item>
+        <item name="colorOnSurface">@color/nexus_text_primary</item>
+        <item name="android:windowBackground">@color/nexus_bg</item>
+        <item name="android:statusBarColor">@color/nexus_bg</item>
+        <item name="android:navigationBarColor">@color/nexus_bg</item>
+    </style>
+
+    <style name="NexusSwitch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:paddingVertical">6dp</item>
+    </style>
+
+</resources>

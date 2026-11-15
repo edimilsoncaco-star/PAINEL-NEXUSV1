@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta Nexus — dark HUD -->
+    <color name="nexus_bg">#0D0D0F</color>
+    <color name="nexus_card">#1A1A22</color>
+    <color name="nexus_panel_bg">#14141C</color>
+    <color name="nexus_panel_header">#0F0F17</color>
+    <color name="nexus_accent">#7B61FF</color>
+    <color name="nexus_accent_dim">#3D2F99</color>
+    <color name="nexus_green">#4ADE80</color>
+    <color name="nexus_yellow">#FACC15</color>
+    <color name="nexus_red">#F87171</color>
+    <color name="nexus_text_primary">#F0F0F8</color>
+    <color name="nexus_text_secondary">#8888AA</color>
+    <color name="nexus_divider">#2A2A38</color>
+
+    <!-- MaterialComponents required -->
+    <color name="colorPrimary">@color/nexus_accent</color>
+    <color name="colorPrimaryVariant">@color/nexus_accent_dim</color>
+    <color name="colorOnPrimary">@color/nexus_text_primary</color>
+    <color name="colorSecondary">@color/nexus_accent</color>
+    <color name="colorSecondaryVariant">@color/nexus_accent_dim</color>
+    <color name="colorOnSecondary">@color/nexus_text_primary</color>
+    <color name="colorSurface">@color/nexus_card</color>
+    <color name="colorOnSurface">@color/nexus_text_primary</color>
+    <color name="colorBackground">@color/nexus_bg</color>
+    <color name="colorOnBackground">@color/nexus_text_primary</color>
+    <color name="colorError">@color/nexus_red</color>
+    <color name="colorOnError">@color/nexus_text_primary</color>
+</resources>
